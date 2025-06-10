@@ -1,0 +1,95 @@
+/* container */
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+/* screen result */
+.chiffres {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 5%;
+    margin: 50% 20% 1% 20%;
+    border: 1px solid black;
+    background-color: azure;
+}
+
+p {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* button number aera */
+main {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 5%;
+    margin: 5% 15% 5% 15%;
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: azure;
+}
+
+main div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bouton_0 {
+    display: flex;
+    justify-content: center;
+}
+
+/* button opé aera */
+section {
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 50%;
+    padding: 1%;
+    margin: auto 1% auto 1%;
+}
+
+.operateur {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: azure;
+    width: max-content;
+    margin: 1%;
+    padding: 5%;
+    align-items: center;
+}
+
+section button {
+    width: 3rem;
+    margin: 15%;
+    padding: 5%;
+}
+
+/* button */
+button {
+    font-family: monospace;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 3%;
+    margin: 2%;
+    width: 20%;
+    border: 1px solid;
+    border-radius: 20%;
+    background-color: bisque;
+}
+
+button:hover {
+    background-color: aliceblue;
+}
+
+button:active {
+    background-color: #f0f8ff75;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40%;
+}

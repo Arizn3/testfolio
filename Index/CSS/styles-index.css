@@ -1,0 +1,32 @@
+body {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN */
+
+h4 {
+    font-family: monospace;
+    color: white;
+}
+
+main {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    margin: 10%;
+    border: 2px solid white;
+    border-radius: 5%;
+    width: 20%;
+}
+
+select {
+    margin: 5%;
+}
+
+div {
+    margin: 10%;
+}

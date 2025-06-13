@@ -8,11 +8,11 @@ bouton.addEventListener('click', () => {
         case "Calculatrice":
             location.replace("http://localhost/testfolio/Calculatrice/")
             break;
-        case "Formulaire":
-            location.replace("http://localhost/testfolio/Formulaire/")
+        case "Login":
+            location.replace("http://localhost/testfolio/Login/")
             break;
         case "Crêperie":
-            location.replace("http://localhost/testfolio/Crêperie/")
+            location.replace("http://localhost/testfolio/Creperie/")
             break;
         case "DST":
             location.replace("http://localhost/testfolio/DST/")

@@ -13,34 +13,34 @@
     </div>
     <main>
         <div>
-            <button onclick="verifierValeurs('7')">7</button>
-            <button onclick="verifierValeurs('8')">8</button>
-            <button onclick="verifierValeurs('9')">9</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('7')">7</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('8')">8</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('9')">9</button>
         </div>
         <div>
-            <button onclick="verifierValeurs('4')">4</button>
-            <button onclick="verifierValeurs('5')">5</button>
-            <button onclick="verifierValeurs('6')">6</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('4')">4</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('5')">5</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('6')">6</button>
         </div>
         <div>
-            <button onclick="verifierValeurs('1')">1</button>
-            <button onclick="verifierValeurs('2')">2</button>
-            <button onclick="verifierValeurs('3')">3</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('1')">1</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('2')">2</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('3')">3</button>
         </div>
         <div class="bouton_0">
-            <button onclick="verifierValeurs('0')">0</button>
+            <button name="nombre" onclick="maCalculatrice.verifierValeurs('0')">0</button>
         </div>
     </main>
     <section>
         <div class="operateur">
-            <button onclick="verifierOperateur('+')">+</button>
-            <button onclick="verifierOperateur('-')">-</button>
-            <button onclick="verifierOperateur('*')">*</button>
-            <button onclick="verifierOperateur('/')">/</button>
-            <button onclick="operation()">=</button>
+            <button onclick="maCalculatrice.verifierOperateur('+')">+</button>
+            <button onclick="maCalculatrice.verifierOperateur('-')">-</button>
+            <button onclick="maCalculatrice.verifierOperateur('*')">*</button>
+            <button onclick="maCalculatrice.verifierOperateur('/')">/</button>
+            <button onclick="maCalculatrice.operation()">=</button>
         </div>
     </section>
-    <script src="/testfolio/Calculatrice/script-sans-class.js"></script>
+    <script src="/testfolio/Calculatrice/script-avec-class-constructor.js"></script>
 </body>
 
 </html>

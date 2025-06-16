@@ -1,4 +1,4 @@
-//PROPRIETES STATIQUES
+//VARIABLES
 valeur_A = '';
 valeur_B = '';
 operateur = '';

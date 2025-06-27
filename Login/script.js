@@ -1,12 +1,10 @@
 //FONCTION BACK
-
 const back = document.getElementById('back');
 back.addEventListener('click', () => {
     window.location.replace('http://localhost/testfolio/Index/index.html');
 });
 
 //FONCTIONS D'ANIMATIONS JS/CSS
-
 function getDiv(id) {
     return document.getElementById(id).parentNode
 };
@@ -45,7 +43,6 @@ boutonBack.addEventListener('click', () => {
 });
 
 //DATA FONCTIONS
-
 class Data {
     constructor(id) {
         this.id = id;
@@ -54,7 +51,7 @@ class Data {
         this.array = new Array();
     };
 
-    //ENVOYER DANS LE LOCALSTORAGE POUR LE MOMENT
+    //ENVOIE DANS LE LOCALSTORAGE POUR LE MOMENT
     sendData() {
         this.objData = new FormData(this.formulaire);
         this.objData.forEach((value, key) => {
@@ -66,8 +63,6 @@ class Data {
         localStorage.setItem('test', JSONarray)
         document.getElementById('data').reset();
     };
-
-
 };
 
 const myData = new Data('data');

@@ -1,6 +1,17 @@
+/* CONTAINER */
+body {
+    background-color: darkblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
 /* BOUTON MENU */
-.div_back {
-    place-self: center;
+header {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    margin-top: 20%;
 }
 
 .btn_back {
@@ -23,13 +34,6 @@
     border: none;
 }
 
-/* CONTAINER */
-body {
-    background-color: darkblue;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-}
 
 /* AFFICHAGE */
 .affichageChiffres {

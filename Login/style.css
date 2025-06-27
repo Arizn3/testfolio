@@ -1,9 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    font-family: Microsoft Sans Serif;
     background-color: darkblue
 }
 
@@ -47,7 +42,10 @@ p {
 }
 
 form {
-    place-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 fieldset {

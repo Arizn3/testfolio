@@ -5,13 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Crêperie" content="Crêperie calculator">
+    <link rel="stylesheet" href="/testfolio/Creperie/style.css">
     <title>Crêperie</title>
 </head>
 
 <body>
+    <header>
+        <div class="div_btnMenu">
+            <button type="button" id="btnMenu">Menu</button>
+        </div>
+    </header>
+
     <main>
-        
+        <div>
+            <div>
+                <label for="nombre">Indique le nombre d'œufs :</label>
+                <section>
+                    <button class="btnMoins" type="button" id="btnMoins"> - </button>
+                    <input placeholder="0" type="text" name="nombre" list="nombre" id="nombreOeuf" maxlength="2">
+                    <button class="btnPlus" type="button" id="btnPlus"> + </button>
+                </section>
+                <datalist id="nombre">
+                    <option value="1">
+                    <option value="2">
+                    <option value="3">
+                    <option value="4">
+                    <option value="5">
+                    <option value="6">
+                </datalist>
+            </div>
+            <div class="div_btnIngredients">
+                <button type="button" id="btnIngredients">Ingrédients</button>
+            </div>
+        </div>
+        <div id="div_resultat" class="div_resultat">
+            <p id="farine"></p>
+            <p id="lait"></p>
+            <p id="sel"></p>
+            <p id="sucre"></p>
+            <p id="beurre"></p>
+        </div>
     </main>
+
+    <footer>
+
+    </footer>
+    <script src="/testfolio/Creperie/script.js"></script>
 </body>
 
 </html>

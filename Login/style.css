@@ -15,12 +15,14 @@ body {
     height: 6em;
     border: 2px solid black;
     border-radius: 3em;
+    transition: rotate 2s;
 }
 
 .back:hover {
     background-color: black;
     border: 2px solid red;
     color: red;
+    rotate: 360deg;
 }
 
 /* MAIN */

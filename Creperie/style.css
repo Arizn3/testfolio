@@ -1,0 +1,124 @@
+/* BODY */
+body {
+    background-color: darkblue;
+}
+
+/* BOUTON MENU */
+.div_btnMenu {
+    text-align: center;
+    margin-top: 7%;
+}
+
+#btnMenu {
+    background-color: cyan;
+    color: darkblue;
+    width: 6em;
+    height: 6em;
+    border: 1px solid white;
+    border-radius: 3em;
+    transition: rotate 2s;
+}
+
+#btnMenu:hover {
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    rotate: 360deg;
+}
+
+#btnMenu:active {
+    border: none;
+}
+
+/* MAIN */
+main {
+    background-color: cyan;
+    border: 10px solid rgb(239, 219, 192);
+    border-top-left-radius: 20%;
+    border-end-end-radius: 20%;
+    margin: 10% 35%;
+    padding: 3%;
+}
+
+label {
+    font-family: serif;
+    color: brown;
+    font-size: 2em;
+    margin: 5%;
+}
+
+.div_btnIngredients {
+    margin: 5% 38%;
+}
+
+input {
+    text-align: center;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius: 1em;
+    font-size: medium;
+    width: 10%;
+}
+
+.btnMoins {
+    background-color: white;
+    margin: 5% 5% 0% 28%;
+    width: 7%;
+    border: 2px solid black;
+    border-top-left-radius: 30%;
+    border-end-end-radius: 30%;
+}
+
+.btnPlus {
+    background-color: white;
+    margin: 5% 28% 0% 5%;
+    width: 7%;
+    border: 2px solid black;
+    border-top-left-radius: 30%;
+    border-end-end-radius: 30%;
+}
+
+.btnMoins:hover,
+.btnPlus:hover {
+    background-color: whitesmoke
+}
+
+.btnMoins:active,
+.btnPlus:active {
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+/* RESULTAT */
+.div_resultat {
+    font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: brown;
+    opacity: 0;
+}
+
+/* BOUTON INGREDIENTS */
+#btnIngredients {
+    justify-self: center;
+    background-color: rgb(249, 231, 208);
+    color: brown;
+    width: 7em;
+    height: 7em;
+    border: 1px solid brown;
+    border-radius: 4.5em;
+}
+
+#btnIngredients:hover {
+    background-color: rgb(239, 219, 192);
+}
+
+#btnIngredients:active {
+    border: none;
+}
+
+/* ANIMATION JS */
+.aff {
+    opacity: 1;
+    transition-duration: 1s;
+}

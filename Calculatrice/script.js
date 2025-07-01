@@ -1,9 +1,15 @@
-//VARIABLES
+// DIV RETOUR
+const back = document.getElementById('back');
+back.addEventListener('click', () => {
+    location.replace('http://localhost/testfolio/Index/index.html')
+});
+
+// VARIABLES
 valeur_A = '';
 valeur_B = '';
 operateur = '';
 
-//FONCTION POUR CHIFFRES
+// FONCTION POUR CHIFFRES
 function verifierValeurs(valeur) {
     if (operateur == '') {
         this.valeur_A += valeur;
@@ -14,13 +20,13 @@ function verifierValeurs(valeur) {
     };
 };
 
-//FONCTION POUR OPERATEURS
+// FONCTION POUR OPERATEURS
 function verifierOperateur(o) {
     operateur = o;
     document.getElementById('affichage').textContent = valeur_A + ' ' + operateur;
 };
 
-//FONCTION POUR RESULTAT
+// FONCTION POUR RESULTAT
 function operation() {
     let resultat = '';
     valeur_A = parseInt(valeur_A);
@@ -39,9 +45,9 @@ function operation() {
             resultat = valeur_A / valeur_B;
             break;
     };
-    //AFFICHAGE DE LA REPONSE
+    // AFFICHAGE DE LA REPONSE
     document.getElementById('affichage').textContent = valeur_A + ' ' + operateur + ' ' + valeur_B + ' = ' + resultat;
-    //RESET
+    // RESET
     valeur_A = '';
     valeur_B = '';
     operateur = '';

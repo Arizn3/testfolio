@@ -4,14 +4,14 @@ back.addEventListener('click', () => {
     location.replace('http://localhost/testfolio/Index/index.html')
 });
 
-//CLASSE CALCULATRICE
+// CLASSE CALCULATRICE
 class calculatrice {
-    //PROPRIETES STATIQUES
+    // PROPRIETES STATIQUES
     static valeur_A = '';
     static valeur_B = '';
     static operateur = '';
 
-    //FONCTION POUR CHIFFRES
+    // FONCTION POUR CHIFFRES
     static verifierValeurs(valeur) {
         if (this.operateur == '') {
             this.valeur_A += valeur;
@@ -26,13 +26,13 @@ class calculatrice {
         };
     };
 
-    //FONCTION POUR OPERATEURS
+    // FONCTION POUR OPERATEURS
     static verifierOperateur(operateur) {
         this.operateur = operateur;
         document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur;
     };
 
-    //FONCTION POUR RESULTAT
+    // FONCTION POUR RESULTAT
     static operation() {
         let resultat = '';
         switch (this.operateur) {
@@ -49,9 +49,9 @@ class calculatrice {
                 resultat = this.valeur_A / this.valeur_B;
                 break;
         };
-        //AFFICHAGE DE LA REPONSE
+        // AFFICHAGE DE LA REPONSE
         document.getElementById('affichage').textContent = this.valeur_A + ' ' + this.operateur + ' ' + this.valeur_B + ' = ' + resultat;
-        //RESET
+        // RESET
         this.valeur_A = '';
         this.valeur_B = '';
         this.operateur = '';

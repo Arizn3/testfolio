@@ -1,12 +1,19 @@
+// FONCTION RETOUR
+const back = document.getElementById('back');
+back.addEventListener('click', () => {
+    location.replace('http://localhost/testfolio/Index/index.html')
+});
+
+// CLASSE CALCULATRICE
 class calculatrice {
-    //CONSTRUCTEUR
+    // CONSTRUCTEUR
     constructor() {
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
     };
 
-    //FONCTION POUR CHIFFRES
+    // FONCTION POUR CHIFFRES
     verifierValeurs(nb) {
         if (this.operateur == '') {
             this.valeurA += nb;
@@ -19,14 +26,14 @@ class calculatrice {
         };
     };
 
-    //FONCTION POUR OPERATEURS
+    // FONCTION POUR OPERATEURS
     verifierOperateur(operateur) {
         this.operateur = operateur;
         console.log(this.operateur);
         document.getElementById('affichage').textContent = this.valeurA + ' ' + this.operateur;
     };
 
-    //FONCTION POUR RESULTAT
+    // FONCTION POUR RESULTAT
     operation() {
         let resultat = '';
         this.valeurA = parseInt(this.valeurA);
@@ -45,13 +52,13 @@ class calculatrice {
                 resultat = this.valeurA / this.valeurB;
                 break;
         };
-        //AFFICHAGE DE LA REPONSE
+        // AFFICHAGE DE LA REPONSE
         document.getElementById('affichage').textContent = this.valeurA + ' ' + this.operateur + ' ' + this.valeurB + ' = ' + resultat;
         const gg = document.getElementsByName('nombre');
         gg.forEach(element => {
             element.innerHTML = "°_°";
         });
-        //RESET
+        // RESET
         console.log(resultat);
         this.valeurA = '';
         this.valeurB = '';

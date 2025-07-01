@@ -13,7 +13,7 @@ let beurre = 13
 function addition() {
     let valeur = document.getElementById('nombreOeuf').value;
     let qttFarine = farine * valeur;
-    let qttLait = lait + 0.1 * valeur;
+    let qttLait = lait + 0.12 * valeur;
     let qttSucre = sucre * valeur;
     let qttBeurre = beurre * valeur;
     if (valeur !== '' && valeur > 0) {

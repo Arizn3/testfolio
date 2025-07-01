@@ -22,7 +22,7 @@ header {
     height: 6em;
     border-radius: 3em;
     border: 1px solid black;
-    transition: rotate 2s;
+    transition: rotate, 1s;
 }
 
 .btn_back:hover {

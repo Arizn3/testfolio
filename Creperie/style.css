@@ -16,7 +16,7 @@ body {
     height: 6em;
     border: 1px solid white;
     border-radius: 3em;
-    transition: rotate 2s;
+    transition: rotate, 1s;
 }
 
 #btnMenu:hover {

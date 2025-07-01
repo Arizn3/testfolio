@@ -41,10 +41,12 @@ button {
     border: 2px solid darkblue;
     border-radius: 3em;
     font-weight: bolder;
+    transition: rotate, 1s;
 }
 
 button:hover {
     background-color: black;
     border: 2px solid red;
     color: red;
+    rotate: 360deg;
 }

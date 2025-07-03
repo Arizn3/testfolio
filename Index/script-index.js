@@ -9,13 +9,16 @@ function replace() {
         case "Calculatrice":
             location.replace("http://localhost/testfolio/Calculatrice/")
             break;
-        case "Login":
-            location.replace("http://localhost/testfolio/Login/")
+        case "Connexion":
+            location.replace("http://localhost/testfolio/Connexion/")
             break;
         case "Crêperie":
             location.replace("http://localhost/testfolio/Creperie/")
             break;
-        case "DST":
+        case "Thermomètre (ça arrive !)":
+            location.replace("http://localhost/testfolio/Thermometre/")
+            break;
+        case "DST (ça arrive !)":
             location.replace("http://localhost/testfolio/DST/")
             break;
         default:

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/testfolio/Thermometre/style.css">
+    <title>Thermomètre</title>
+</head>
+
+<body>
+    <video loop="true" autoplay>
+    <source src="/testfolio/img/IA.appThermometre_videobg_ciel.mp4" type="video/mp4">
+    </video>
+    <header>
+        <div class="div_retour">
+            <button type="button" id="btnRetour" class="btnRetour">Menu</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="id_affichage" class="div_affichage">
+            <p id="affichage">23°C</p>
+        </div>
+
+        <div class="div_indication">
+            <label for="localisation">Indique ta localisation :</label>
+            <input type="text" name="localisation" id="localisation" class="localisation" placeholder="Je suis à.."
+                maxlength="20">
+            <div class="div_recherche">
+                <button type="button" id="btnRecherche"><img src="/testfolio/img/appThermometre_logo_btn_temps.png"
+                        alt=""></button>
+            </div>
+        </div>
+        <div class="div_reglages">
+            <div>
+                <input type="radio" name="mode" id="darkMode">
+                <label for="darkMode">Dark mode</label>
+            </div>
+            <div>
+                <input type="radio" name="mode" id="colorMode">
+                <label for="colorMode">Color mode</label>
+            </div>
+            <div>
+                <input type="range" name="range" id="rangeIntensiter">
+            </div>
+            <div>
+                <input type="color" name="color" id="choixCouleurs">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="/testfolio/Thermometre/script.js"></script>
+</body>
+
+</html>

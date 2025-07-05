@@ -56,7 +56,7 @@ main {
     z-index: 2;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     place-self: center;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     grid-column: 2/5;
     grid-row: 3/7;
     border: 2px solid rgb(0, 0, 81);
@@ -128,14 +128,10 @@ button img {
 
 #rangeIntensiter, #choixCouleurs {
     transition-duration: 1s;
+    border: 1px solid black;
 }
 
 /* ANIMATION JS */
-.disp {
-    transition-duration: 1s;
-    opacity: 0;
-}
-
 /* DARKMODE */
 .darkBody {
     transition-duration: 1s;
@@ -145,7 +141,7 @@ button img {
 .darkMain {
     transition-duration: 1s;
     background-color: black;
-    border: 2px solid red;
+    border: 2px solid blue;
     color: white;
 }
 

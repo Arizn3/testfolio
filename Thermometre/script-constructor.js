@@ -56,6 +56,7 @@ class decorateur {
         this.main = document.querySelector('main');
         this.input = document.querySelector('input');
         this.affichage_id = document.getElementById('id_affichage');
+        this.affichage = document.getElementById('affichage');
         this.input_text = document.getElementById('localisation');
     };
     // FONCTION DARK MODE
@@ -80,15 +81,15 @@ class decorateur {
         if (couleur == '#ffffff') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#000000';
-            this.affichage_id.style.borderColor = '#000000';
-            this.affichage_id.style.color = '#000000';
+            this.affichage.style.borderColor = '#000000';
+            this.affichage.style.color = '#000000';
             this.input_text.style.borderBlockColor = '#000000';
             this.input_text.style.color = '#000000';
         } else if (couleur == '#000000') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#ffffff';
-            this.affichage_id.style.borderColor = '#ffffff';
-            this.affichage_id.style.color = '#ffffff';
+            this.affichage.style.borderColor = '#ffffff';
+            this.affichage.style.color = '#ffffff';
             this.input_text.style.borderBlockColor = '#ffffff';
             this.input_text.style.color = '#ffffff';
         } else {

@@ -14,7 +14,6 @@ async function getData(city, callback) {
     }
     catch {
         alert('Indiquez une ville ou une région.');
-        ;
     };
 };
 
@@ -95,12 +94,10 @@ function couleurs() {
     removeBody();
 };
 
-
 // FONCTION COULEUR DE FOND
 const input = document.getElementById('choixCouleurs');
 const affichageBordure = document.getElementById('id_affichage');
 const inputText = document.getElementById('localisation')
-
 function contreBlanc() {
     const cible = document.querySelector('main');
     const couleur = input.value;

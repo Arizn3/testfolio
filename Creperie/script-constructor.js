@@ -65,7 +65,7 @@ class Creperie {
     };
 
 };
-// Instance
+// INSTANCE
 const creperie = new Creperie('nombreOeuf');
 
 // Appel de la méthode incrementale

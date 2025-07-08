@@ -15,7 +15,7 @@ function replace() {
         case "Crêperie":
             location.replace("http://localhost/testfolio/Creperie/")
             break;
-        case "Thermomètre (ça arrive !)":
+        case "Thermomètre":
             location.replace("http://localhost/testfolio/Thermometre/")
             break;
         case "DST (ça arrive !)":

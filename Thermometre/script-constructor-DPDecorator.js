@@ -34,7 +34,7 @@ class OpenWeather {
 };
 
 // CLÉ API 
-const key = '628c02c4a8605707c0065a6615d27e84';
+const key = '';
 // APPEL DE LA FONCTION PRINCIPALE EN CRÉANT UNE INSTANCE
 const btnIndique = document.getElementById('btnRecherche');
 btnIndique.addEventListener('click', () => {

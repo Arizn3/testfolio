@@ -5,7 +5,7 @@ back.addEventListener('click', () => {
 });
 
 // API
-const apiKey = '628c02c4a8605707c0065a6615d27e84';
+const apiKey = '';
 async function getData(city, callback) {
     try {
         const reponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`)

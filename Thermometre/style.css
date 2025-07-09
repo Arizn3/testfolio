@@ -68,7 +68,7 @@ main {
 
 /* DIV AFFICHAGE */
 .div_affichage {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid black;
     margin: 10% 1% 1% 35%;
     height: 35%;
@@ -76,7 +76,7 @@ main {
     place-content: center;
     text-align: center;
     font-size: xxx-large;
-    color: blue;
+    color: #0000ff;
 }
 
 main button {
@@ -149,5 +149,4 @@ button img {
     transition-duration: 1s;
     border: 1px solid white;
     background-color: transparent;
-    color: white;
 }

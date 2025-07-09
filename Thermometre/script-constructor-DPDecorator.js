@@ -56,7 +56,6 @@ class decorateur {
         this.main = document.querySelector('main');
         this.input = document.querySelector('input');
         this.affichage_id = document.getElementById('id_affichage');
-        this.affichage = document.getElementById('affichage');
         this.input_text = document.getElementById('localisation');
     };
 

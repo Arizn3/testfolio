@@ -58,21 +58,32 @@ class decorateur {
         this.affichage_id = document.getElementById('id_affichage');
         this.input_text = document.getElementById('localisation');
     };
+
+    // FONCTION ADD CSS 
+    addCSS(element, id) {
+        element.classList.add(id)
+    };
+
+    // FONCTION REMOVE CSS
+    removeCSS(element, id) {
+        element.classList.remove(id)
+    };
+
     // FONCTION DARK MODE
     darkmode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_fumee.mp4");
-        this.main.classList.add('darkMain');
-        this.input.classList.add('darkInput');
-        this.affichage_id.classList.add('darkInput');
-        this.body.classList.add('darkBody');
+        this.addCSS(this.body, 'darkBody');
+        this.addCSS(this.main, 'darkMain');
+        this.addCSS(this.input, 'darkInput');
+        this.addCSS(this.affichage_id, 'darkInput');
     };
     // FONCTION COULEUR
     couleurMode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_ciel.mp4");
-        this.main.classList.remove('darkMain');
-        this.input.classList.remove('darkInput');
-        this.affichage_id.classList.remove('darkInput');
-        this.body.classList.remove('darkBody');
+        this.removeCSS(this.body, 'darkBody');
+        this.removeCSS(this.main, 'darkMain');
+        this.removeCSS(this.input, 'darkInput');
+        this.removeCSS(this.affichage_id, 'darkInput');
     };
     // FONCTION CHOIX DE COULEURS AVEC CONDITION
     choixDeCouleur() {
@@ -81,16 +92,12 @@ class decorateur {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#000000';
             this.affichage_id.style.borderColor = '#000000';
-            this.affichage_id.style.color = '#000000';
             this.input_text.style.borderBlockColor = '#000000';
-            this.input_text.style.color = '#000000';
         } else if (couleur == '#000000') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#ffffff';
             this.affichage_id.style.borderColor = '#ffffff';
-            this.affichage_id.style.color = '#ffffff';
             this.input_text.style.borderBlockColor = '#ffffff';
-            this.input_text.style.color = '#ffffff';
         } else {
             this.main.style.backgroundColor = couleur;
         };

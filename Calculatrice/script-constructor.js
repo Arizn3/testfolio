@@ -13,7 +13,7 @@ class calculatrice {
         this.operateur = '';
     };
 
-    // FONCTION POUR CHIFFRES
+    // FONCTION POUR LES NOMBRES
     verifierValeurs(nb) {
         if (this.operateur == '') {
             this.valeurA += nb;

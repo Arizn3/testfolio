@@ -11,13 +11,11 @@ class calculatrice {
     static valeur_B = '';
     static operateur = '';
 
-    // FONCTION POUR CHIFFRES
+    // FONCTION POUR LES NOMBRES
     static verifierValeurs(valeur) {
         if (this.operateur == '') {
             this.valeur_A += valeur;
-            console.log(this.valeur_A);
             this.valeur_A = parseInt(this.valeur_A)
-            console.log(this.valeur_A);
             document.getElementById('affichage').textContent = this.valeur_A;
         } else {
             this.valeur_B += valeur;

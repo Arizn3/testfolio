@@ -9,18 +9,18 @@ valeur_A = '';
 valeur_B = '';
 operateur = '';
 
-// FONCTION POUR CHIFFRES
+// FONCTION POUR LES NOMBRES
 function verifierValeurs(valeur) {
     if (operateur == '') {
-        this.valeur_A += valeur;
+        valeur_A += valeur;
         document.getElementById('affichage').textContent = valeur_A;
     } else {
-        this.valeur_B += valeur;
+        valeur_B += valeur;
         document.getElementById('affichage').textContent = valeur_A + ' ' + operateur + ' ' + valeur_B;
     };
 };
 
-// FONCTION POUR OPERATEURS
+// FONCTION POUR OPERATEUR
 function verifierOperateur(o) {
     operateur = o;
     document.getElementById('affichage').textContent = valeur_A + ' ' + operateur;
@@ -45,7 +45,7 @@ function operation() {
             resultat = valeur_A / valeur_B;
             break;
     };
-    // AFFICHAGE DE LA REPONSE
+    // AFFICHAGE DU RESULTAT
     document.getElementById('affichage').textContent = valeur_A + ' ' + operateur + ' ' + valeur_B + ' = ' + resultat;
     // RESET
     valeur_A = '';

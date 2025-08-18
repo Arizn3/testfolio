@@ -1,7 +1,7 @@
 // BOUTON MENU
 const back = document.getElementById('btnRetour');
 back.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Index/index.html')
+    location.replace('http://localhost/testfolio/Menu/index.html')
 });
 
 // API

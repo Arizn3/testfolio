@@ -7,16 +7,16 @@ function replace() {
     let choix = document.getElementById('listeFonctions').value;
     switch (choix) {
         case "Calculatrice":
-            location.replace("http://localhost/testfolio/Calculatrice/")
+            location.replace("http://localhost/testfolio/CalculatriceApp/")
             break;
         case "Connexion":
-            location.replace("http://localhost/testfolio/Connexion/")
+            location.replace("http://localhost/testfolio/ConnexionApp/")
             break;
         case "Crêperie":
-            location.replace("http://localhost/testfolio/Creperie/")
+            location.replace("http://localhost/testfolio/CreperieApp/")
             break;
         case "Thermomètre":
-            location.replace("http://localhost/testfolio/Thermometre/")
+            location.replace("http://localhost/testfolio/ThermometreApp/")
             break;
         case "DST (ça arrive !)":
             location.replace("http://localhost/testfolio/DST/")

@@ -1,7 +1,7 @@
 // BOUTON RETOUR AU MENU
 const back = document.getElementById('btnRetour');
 back.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Index/index.html')
+    location.replace('http://localhost/testfolio/Menu/index.html')
 });
 
 // CLASS OPEN WEATHER
@@ -56,7 +56,6 @@ class decorateur {
         this.main = document.querySelector('main');
         this.input = document.querySelector('input');
         this.affichage_id = document.getElementById('id_affichage');
-        this.affichage = document.getElementById('affichage');
         this.input_text = document.getElementById('localisation');
     };
 

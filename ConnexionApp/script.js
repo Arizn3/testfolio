@@ -1,7 +1,7 @@
 //FONCTION BACK
 const back = document.getElementById('back');
 back.addEventListener('click', () => {
-    window.location.replace('http://localhost/testfolio/Index/index.html');
+    window.location.replace('http://localhost/testfolio/Menu/index.html');
 });
 
 //FONCTIONS D'ANIMATIONS JS/CSS

@@ -1,7 +1,7 @@
 // DIV RETOUR
 // const back = document.getElementById('back');
 // back.addEventListener('click', () => {
-//     location.replace('http://localhost/testfolio/Index/index.html')
+//     location.replace('http://localhost/testfolio/Menu/index.html')
 // });
 
 // VARIABLES

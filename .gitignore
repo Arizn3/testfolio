@@ -33,3 +33,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Nodes Packages #
+############
+node_modules

@@ -65,4 +65,5 @@ class calculatrice {
         this.operateur = '';
     };
 };
+
 const maCalculatrice = new calculatrice();

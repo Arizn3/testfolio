@@ -6,34 +6,30 @@ back.addEventListener('click', () => {
 
 // CLASSE CALCULATRICE
 class calculatrice {
-    // CONSTRUCTEUR
     constructor() {
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
     };
 
-    // FONCTION POUR LES NOMBRES
+    // METHODE POUR LES NOMBRES
     verifierValeurs(nb) {
         if (this.operateur == '') {
             this.valeurA += nb;
-            console.log(this.valeurA);
-            document.getElementById('affichage').textContent = this.valeurA
+            document.getElementById('affichage').textContent = `${this.valeurA}`;
         } else {
             this.valeurB += nb;
-            console.log(this.valeurB);
-            document.getElementById('affichage').textContent = this.valeurA + ' ' + this.operateur + ' ' + this.valeurB;
+            document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur} ${this.valeurB}`;
         };
     };
 
-    // FONCTION POUR OPERATEURS
+    // METHODE POUR OPERATEURS
     verifierOperateur(operateur) {
         this.operateur = operateur;
-        console.log(this.operateur);
-        document.getElementById('affichage').textContent = this.valeurA + ' ' + this.operateur;
+        document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur}`;
     };
 
-    // FONCTION POUR RESULTAT
+    // METHODE POUR RESULTAT
     operation() {
         let resultat = '';
         this.valeurA = parseInt(this.valeurA);
@@ -52,14 +48,11 @@ class calculatrice {
                 resultat = this.valeurA / this.valeurB;
                 break;
         };
+
         // AFFICHAGE DE LA REPONSE
-        document.getElementById('affichage').textContent = this.valeurA + ' ' + this.operateur + ' ' + this.valeurB + ' = ' + resultat;
-        const gg = document.getElementsByName('nombre');
-        gg.forEach(element => {
-            element.innerHTML = "°_°";
-        });
+        document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur} ${this.valeurB} = ${resultat}`;
+
         // RESET
-        console.log(resultat);
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';

@@ -5,51 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Calculatrice" content="Calculatrice">
-    <link rel="stylesheet" href="/testfolio/CalculatriceApp/style.css">
+    <link rel="stylesheet" href="/testfolio/CalculatriceApp/style-calculatrice.css">
 </head>
-<header>
-    <div>
-        <button class="btn_back" id="back">Menu</button>
-    </div>
-</header>
 
 <body>
-    <div class="affichageChiffres">
-        <p id="affichage">Calculatrice</p>
-    </div>
+    <header>
+        <div>
+            <button class="btnBack" id="back">Menu</button>
+        </div>
+    </header>
     <main>
-        <div>
-            <button onclick="calculatrice.verifierValeurs('1')">1</button>
-            <button onclick="calculatrice.verifierValeurs('2')">2</button>
-            <button onclick="calculatrice.verifierValeurs('3')">3</button>
+        <div class="divAffichageResultat">
+            <p id="affichage">Fxck</p>
         </div>
-        <div>
-            <button onclick="calculatrice.verifierValeurs('4')">4</button>
-            <button onclick="calculatrice.verifierValeurs('5')">5</button>
-            <button onclick="calculatrice.verifierValeurs('6')">6</button>
-        </div>
-        <div>
-            <button onclick="calculatrice.verifierValeurs('7')">7</button>
-            <button onclick="calculatrice.verifierValeurs('8')">8</button>
-            <button onclick="calculatrice.verifierValeurs('9')">9</button>
-        </div>
-        <div class="bouton_0">
-            <button onclick="calculatrice.verifierValeurs('0')">0</button>
-        </div>
+        <section>
+            <div class="nombres">
+                <button onclick="maCalculatrice.verifierValeurs('1')">1</button>
+                <button onclick="maCalculatrice.verifierValeurs('2')">2</button>
+                <button onclick="maCalculatrice.verifierValeurs('3')">3</button>
+                <br>
+                <button onclick="maCalculatrice.verifierValeurs('4')">4</button>
+                <button onclick="maCalculatrice.verifierValeurs('5')">5</button>
+                <button onclick="maCalculatrice.verifierValeurs('6')">6</button>
+                <br>
+                <button onclick="maCalculatrice.verifierValeurs('7')">7</button>
+                <button onclick="maCalculatrice.verifierValeurs('8')">8</button>
+                <button onclick="maCalculatrice.verifierValeurs('9')">9</button>
+                <br>
+                <button onclick="maCalculatrice.verifierValeurs('0')">0</button>
+                <button onclick="maCalculatrice.verifierValeurs(' ')">.</button>
+                <button onclick="maCalculatrice.verifierValeurs(' ')">clear</button>
+            </div> 
+            <div class="operateurs">
+                <button onclick="maCalculatrice.verifierOperateur('+')">+</button>
+                <button onclick="maCalculatrice.verifierOperateur('-')">-</button>
+                <br>
+                <button onclick="maCalculatrice.verifierOperateur('*')">x</button>
+                <button onclick="maCalculatrice.verifierOperateur('/')">/</button>
+                <br>
+                <button onclick="maCalculatrice.operation()">=</button>
+            </div>
+        </section>
     </main>
-    <section>
-        <div class="operateur">
-            <button onclick="calculatrice.verifierOperateur('+')">+</button>
-            <button onclick="calculatrice.verifierOperateur('-')">-</button>
-            <button onclick="calculatrice.verifierOperateur('*')">*</button>
-            <button onclick="calculatrice.verifierOperateur('/')">/</button>
-            <button onclick="calculatrice.operation()">=</button>
-        </div>
-    </section>
-    <script src="/testfolio/CalculatriceApp/script-class.js"></script>
+    <footer>
+    </footer>
+    <script src="/testfolio/CalculatriceApp/script-calculatrice.js"></script>
 </body>
-<footer>
-
-</footer>
 
 </html>

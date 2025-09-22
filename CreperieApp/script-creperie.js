@@ -24,9 +24,9 @@ class Creperie {
         let qttSucre = this.sucre * this.valeur;
         let qttBeurre = this.beurre * this.valeur;
         if (this.valeur !== '' && this.valeur > 0) {
-            document.getElementById('farine').innerText = qttFarine.toFixed(1) + "g de farine"; // 1ère syntaxe
-            document.getElementById('lait').innerText = qttLait.toFixed(1) + "litre de lait";
-            document.getElementById('sucre').innerHTML = `${qttSucre.toFixed(1)} cuillère de sucre`; // 2ème syntaxe
+            document.getElementById('farine').innerText = `${qttFarine.toFixed(1)}g de farine`;
+            document.getElementById('lait').innerText = `${qttLait.toFixed(1)} litre de lait`;
+            document.getElementById('sucre').innerHTML = `${qttSucre.toFixed(1)} cuillère de sucre`;
             document.getElementById('beurre').innerHTML = `${qttBeurre.toFixed(1)}g de beurre fondu`;
             this.aff();
         } else {
@@ -65,28 +65,29 @@ class Creperie {
     };
 
 };
+
 // INSTANCE
 const creperie = new Creperie('nombreOeuf');
 
-// Appel de la méthode incrementale
+// APPEL DE LA METHODE INCREMENTALE
 const incremente = document.getElementById('btnPlus');
 incremente.addEventListener('click', () => {
     creperie.incrementation();
 });
 
-// Appel de la méthode decrementale
+// APPEL DE LA METHODE DECREMENTALE
 const decremente = document.getElementById('btnMoins');
 decremente.addEventListener('click', () => {
     creperie.decrementation();
 });
 
-// Appel de la méthode principale par le bouton ingredients
+// APPEL DE LA METHODE PRINCIPALE PAR LE BOUTON INGREDIENT
 const ingredients = document.getElementById('btnIngredients');
 ingredients.addEventListener('click', () => {
     creperie.addition();
 });
 
-// Appel de la méthode principale par le bouton 'Enter'
+// APPEL DE LA METHODE PRINCIPALE PAR LE BOUTON 'ENTER'
 addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
         creperie.addition();

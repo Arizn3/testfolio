@@ -4,9 +4,12 @@ body {
 }
 
 /* BOUTON MENU */
+header {
+    margin: 5% auto;
+}
+
 .div_btnMenu {
     text-align: center;
-    margin-top: 7%;
 }
 
 #btnMenu {
@@ -32,12 +35,17 @@ body {
 
 /* MAIN */
 main {
+    margin: 10% auto;
+    width: 30em;
+}
+
+.divMain {
+    margin: 10%;
+    padding: 3%;
     background-color: cyan;
     border: 10px solid rgb(239, 219, 192);
     border-top-left-radius: 20%;
     border-end-end-radius: 20%;
-    margin: 10% 35%;
-    padding: 3%;
 }
 
 label {
@@ -62,6 +70,7 @@ input {
     width: 10%;
 }
 
+/* BOUTON PLUS ET MOINS */
 .btnMoins {
     background-color: white;
     margin: 5% 5% 0% 28%;

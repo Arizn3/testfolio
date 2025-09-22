@@ -1,8 +1,8 @@
 /* CONTAINER */
 body {
-    background-color: darkblue;
     display: flex;
     justify-content: center;
+    background-color: darkblue;
 }
 
 /* MAIN */
@@ -13,15 +13,14 @@ h4 {
 }
 
 main {
-    background-color: black;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 1%;
-    margin: 20%;
+    align-items: center;
+    background-color: black;
+    margin: 15% auto;
     border: 2px solid white;
     border-radius: 5%;
-    width: 15%;
+    width: 15em;
 }
 
 select {
@@ -34,6 +33,7 @@ div {
     margin: 10%;
 }
 
+/* BOUTON */
 button {
     background-color: white;
     height: 6em;

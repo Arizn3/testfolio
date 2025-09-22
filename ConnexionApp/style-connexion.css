@@ -1,9 +1,5 @@
-body {
-    background-color: darkblue
-}
-
+/* HEADER */
 /* BOUTON BACK */
-
 .div_back {
     place-self: flex-start;
 }
@@ -26,6 +22,9 @@ body {
 }
 
 /* MAIN */
+body {
+    background-color: darkblue
+}
 
 h3 {
     margin: 10%;
@@ -103,7 +102,6 @@ input {
 }
 
 /* BUTTON */
-
 #connexion {
     margin-top: 9%;
 }
@@ -126,7 +124,6 @@ button:active {
 }
 
 /* ANIMATION JS */
-
 .aff {
     opacity: 1;
     margin: 5%;

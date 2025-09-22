@@ -1,9 +1,4 @@
-// Cette partie du code plus théorique peut se retrouver sur une feuille pour elle seule (ex: script.js).
-// Ce code pourrai se retrouver sous forme de classe avec les mots-clés export default.
-// Exemple cette variable ci-dessous aurai put se retrouver dans le constructor.
-const bouton = document.getElementById('bouton');
-
-function replace() {
+const replace = () => {
     let choix = document.getElementById('listeFonctions').value;
     switch (choix) {
         case "Calculatrice":
@@ -18,6 +13,9 @@ function replace() {
         case "Thermomètre":
             location.replace("http://localhost/testfolio/ThermometreApp/")
             break;
+        case "Memory Game":
+            location.replace("http://localhost/testfolio/MemoryGameApp/")
+            break;
         case "DST (ça arrive !)":
             location.replace("http://localhost/testfolio/DST/")
             break;
@@ -27,8 +25,7 @@ function replace() {
     };
 };
 
-// Cette partie du code lié aux événements peut dans certains projets se retrouver sur une autre feuille (ex: event.js).
-// En appelant la classe sur l'autre feuille JS avec les mots-clés import from. 
+const bouton = document.getElementById('bouton');
 
 bouton.addEventListener('click', () => {
     replace();

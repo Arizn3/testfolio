@@ -1,3 +1,4 @@
+/* CONTAINER */
 body {
     background-color: darkblue;
     display: flex;
@@ -5,7 +6,6 @@ body {
 }
 
 /* MAIN */
-
 h4 {
     font-family: monospace;
     font-size: xx-large;
@@ -27,7 +27,7 @@ main {
 select {
     margin: 5%;
     width: 50%;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 div {

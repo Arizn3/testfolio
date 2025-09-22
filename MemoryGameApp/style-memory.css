@@ -1,26 +1,50 @@
 /* BODY */
 body {
-    font-family: monospace;
-    text-align: center;
+    background-color: darkblue;
 }
 
+/* TITRE */
+h1 {
+    font-family: monospace, 'Courier New', Courier;
+    color: cornsilk;
+    margin: 3% auto;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 5% auto;
+}
+
+section {
+    border: 1px solid white;
+    margin: 1%;
+    padding: 1%;
+}
+
+p {
+    color: white;
+}
+
+/* CONTAINER CREE DANS UNE DIV */
 #game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
-    grid-gap: 10px;
-    justify-content: center;
-    margin: 30px auto;
+    grid-gap: 15px;
+    margin: auto;
 }
 
-/* classe pour l'élément parent créé dynamiquement */
+/* CLASSE DES ELEMENTS PARENT CREE */
 .card {
     background-color: #ccc;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* classe pour l'élément enfant crée dynamiquement, donc les cartes */
+/* CLASSE DES ELEMENTS ENFANT CREE (CARTES) */
 .card .card-content {
     opacity: 0;
 }
@@ -29,19 +53,18 @@ body {
     max-width: 100%;
 }
 
-/* classe au moment du click */
 .card.flip .card-content {
     opacity: 1;
 }
 
-/* classe pour les paires images trouvées */
+/* CLASSE DES ELEMENTS PAIRES TROUVEES */
 .card.matched {
     border: solid 4px rgb(0, 255, 0);
     box-sizing: border-box;
     cursor: default;
 }
 
-/* style animation */
+/* STYLE POUR ANIMATION */
 .card.flip {
     transform: rotateY(180deg);
 }

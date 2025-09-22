@@ -1,4 +1,4 @@
-// creation des cards dans un tableau 
+// CREATION DES CARDS DANS UN TABLEAU
 const cards = [
     'https://picsum.photos/id/10/100/100',
     'https://picsum.photos/id/11/100/100',
@@ -13,28 +13,28 @@ const cards = [
 const gameBoard = document.getElementById('game-board');
 let selectedCards = [];
 
-// fonction qui crée les éléments en appelant les bonnes classe CSS
+// FONCTIONN QUI CREE LES ELEMENTS EN APPELANT LES BONNES CLASSES CSS
 function createCard(url) {
-    // création d'une <div>
+    // CREATION D'UNE BALISE <DIV>
     const card = document.createElement('div');
     card.classList.add('card')
     card.dataset.value = url;
 
-    // création d'une <img>
+    // CREATION D'UNE BALISE <IMG>
     const cardContent = document.createElement('img');
     cardContent.classList.add('card-content');
     cardContent.src = `${url}`;
 
-    // méthode appendChild de l'objet node
+    // METHODE APPENDCHILD DE L'OBJET NODE
     card.appendChild(cardContent);
 
-    // appel de la fonction pour le click 
+    // APPEL DE LA FONCTION POUR LE CLICK 
     card.addEventListener('click', onCardClick)
 
     return card;
 }
 
-// fonction qui duplique chaque élément du tableau initial (cartes)
+// FONCTION QUI DUPLIQUE CHAQUE ELEMENT DU TABLEAU INITIAL (CARTES)
 function duplicateArray(arraySimple) {
     let arrayDouble = [];
     arrayDouble.push(...arraySimple);
@@ -42,14 +42,14 @@ function duplicateArray(arraySimple) {
     return arrayDouble;
 };
 
-// fonction qui mélange les éléments (cartes) dans le tableau
+// FONCTION QUI MELANGE LES ELEMENTS (CARTES) DANS LE TABLEAU 
 function Melange(array) {
     const arrayMelanger = array.sort(() => 0.5 - Math.random());
     return array;
 };
 
-// fonction pour l'évenement, qui vient ajouter la comparaison
-// des éléments (cartes), et qui agis en conséquence :
+// FONCTION POUR L'EVENEMENT QUI VIENT AJOUTER LA COMPARAISON
+// DES ELEMENTS (CARTES), ET QUI AGIS EN CONSEQUENCE :
 function onCardClick(event) {
     const card = event.target.parentElement;
     card.classList.add("flip");
@@ -57,26 +57,22 @@ function onCardClick(event) {
     selectedCards.push(card);
 
     if (selectedCards.length == 2) {
-        // on demande la comparaison entre la valeur dataset qui est
-        // tout simplement l'URL de l'image.
-        // on utilise une méthode de l'objet Window pour rajouter
-        // un lap's de temps.
+        // COMPARAISON ENTRE LES VALEUR DATASET (URL DES IMAGES)
         setTimeout(() => {
             if (selectedCards[0].dataset.value == selectedCards[1].dataset.value) {
-                // paire trouvé
+                // PAIRE TROUVEE
                 selectedCards[0].classList.add("matched");
                 selectedCards[1].classList.add("matched");
-                // méthode removeEventListener pour enlever un evenement
+                // METHODE REMOVE POUR ENELVER UN EVENEMENT
                 selectedCards[0].removeEventListener('click', onCardClick);
                 selectedCards[1].removeEventListener('click', onCardClick);
-                // fonction qui récupère le nombre d'élément cards sans
-                // la classe matched
+                // FONCTION QUI RECUPERE LE NOMBRE D'ELEMENTS CARDS SANS LA CLASSE MATCHED
                 const carteRestante = document.querySelectorAll('.card:not(.matched)');
                 if (carteRestante.length == 0) {
                     alert(`Gagner ! Temps : 0:00`)
                 }
             } else {
-                // false
+                // FALSE
                 selectedCards[0].classList.remove("flip");
                 selectedCards[1].classList.remove("flip");
             };
@@ -86,14 +82,11 @@ function onCardClick(event) {
 };
 
 let allCards = duplicateArray(cards);
-// On appel le même résultat mais avec la fonction melange
+// APPEL DU MÊME RESULTAT MAIS AVEC LA FONCTION MELANGE
 allCards = Melange(allCards);
 
-// appel de la méthode de création HTML avec chaque cartes du tableau mélanger
+// APPEL DE LA METHODE DE CREATION HTML AVEC CHAQUE CARTES DU TABLEAU MELANGER
 allCards.forEach(card => {
     const cardHtml = createCard(card);
     gameBoard.appendChild(cardHtml);
 });
-
-// timer
-

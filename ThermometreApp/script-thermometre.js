@@ -10,7 +10,8 @@ class OpenWeather {
         this.apiKey = apiKey;
         this.city = document.getElementById('localisation').value;
         this.affichage = document.getElementById('affichage');
-        // FONCTION PRINCIPALE
+
+        // PROPRIETE D'INSTANCE PRINCIPALE
         this.afficheData = async function () {
             try {
                 const reponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}&units=metric&lang=fr`);
@@ -23,7 +24,7 @@ class OpenWeather {
                 alert('Indiquez une ville ou une région éxistante.');
             };
         };
-        // FONCTION INDICATION DE ZONE DANS LA VALEUR INPUT
+
         this.afficheName = function (dt) {
             const country = dt.sys.country;
             const name = dt.name;
@@ -34,8 +35,8 @@ class OpenWeather {
 };
 
 // CLÉ API 
-const key = '628c02c4a8605707c0065a6615d27e84';
-// APPEL DE LA FONCTION PRINCIPALE EN CRÉANT UNE INSTANCE
+const key = '';
+// APPEL DE LA METHODE PRINCIPALE EN CRÉANT UNE INSTANCE
 const btnIndique = document.getElementById('btnRecherche');
 btnIndique.addEventListener('click', () => {
     const monApi = new OpenWeather(key);
@@ -60,17 +61,17 @@ class decorateur {
         this.input_text = document.getElementById('localisation');
     };
 
-    // FONCTION ADD CSS 
+    // METHODE ADD CSS 
     addCSS(element, id) {
         element.classList.add(id)
     };
 
-    // FONCTION REMOVE CSS
+    // METHODE REMOVE CSS
     removeCSS(element, id) {
         element.classList.remove(id)
     };
 
-    // FONCTION DARK MODE
+    // METHODE DARK MODE
     darkmode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_fumee.mp4");
         this.addCSS(this.body, 'darkBody');
@@ -78,7 +79,7 @@ class decorateur {
         this.addCSS(this.input, 'darkInput');
         this.addCSS(this.affichage_id, 'darkInput');
     };
-    // FONCTION COULEUR
+    // METHODE COULEUR
     couleurMode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_ciel.mp4");
         this.removeCSS(this.body, 'darkBody');
@@ -86,7 +87,7 @@ class decorateur {
         this.removeCSS(this.input, 'darkInput');
         this.removeCSS(this.affichage_id, 'darkInput');
     };
-    // FONCTION CHOIX DE COULEURS AVEC CONDITION
+    // METHODE CHOIX DE COULEURS AVEC CONDITION
     choixDeCouleur() {
         let couleur = document.getElementById('choixCouleurs').value;
         if (couleur == '#ffffff') {

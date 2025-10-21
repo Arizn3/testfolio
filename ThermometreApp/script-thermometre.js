@@ -6,36 +6,44 @@ back.addEventListener('click', () => {
 
 // CLASS OPEN WEATHER
 class OpenWeather {
+
     constructor(apiKey) {
         this.apiKey = apiKey;
-        this.city = document.getElementById('localisation').value;
-        this.affichage = document.getElementById('affichage');
+    };
 
-        // PROPRIETE D'INSTANCE PRINCIPALE
-        this.afficheData = async function () {
-            try {
-                const reponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}&units=metric&lang=fr`);
-                const data = await reponse.json();
+    // METHODES D'INSTANCE PRINCIPALE
+    afficheData() {
+        const city = document.getElementById('localisation').value;
+        const affichage = document.getElementById('affichage');
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=metric&lang=fr`;
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Echec de la requête');
+                }
+                return response.json();
+            })
+            .then(data => {
                 const temperature = data.main.temp;
-                this.affichage.innerText = temperature + '°C';
-                this.afficheName(data)
-            }
-            catch {
+                affichage.innerText = temperature + '°C';
+                this.afficheName(data);
+            })
+            .catch(error => {
                 alert('Indiquez une ville ou une région éxistante.');
-            };
-        };
+            });
+    };
 
-        this.afficheName = function (dt) {
-            const country = dt.sys.country;
-            const name = dt.name;
-            const zone = `${country} ${name}`;
-            document.getElementById('localisation').value = zone;
-        };
+    afficheName(dt) {
+        const country = dt.sys.country;
+        const name = dt.name;
+        const zone = `${country} ${name}`;
+        document.getElementById('localisation').value = zone;
     };
 };
 
 // CLÉ API 
-const key = '';
+const key = '628c02c4a8605707c0065a6615d27e84';
+
 // APPEL DE LA METHODE PRINCIPALE EN CRÉANT UNE INSTANCE
 const btnIndique = document.getElementById('btnRecherche');
 btnIndique.addEventListener('click', () => {

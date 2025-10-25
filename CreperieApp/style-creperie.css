@@ -8,11 +8,11 @@ header {
     margin: 5% auto;
 }
 
-.div_btnMenu {
+.div_bouton_menu {
     text-align: center;
 }
 
-#btnMenu {
+#bouton_menu {
     background-color: cyan;
     color: darkblue;
     width: 6em;
@@ -22,14 +22,14 @@ header {
     transition: rotate, 1s;
 }
 
-#btnMenu:hover {
+#bouton_menu:hover {
     background-color: black;
     color: red;
     border: 1px solid red;
     rotate: 360deg;
 }
 
-#btnMenu:active {
+#bouton_menu:active {
     border: none;
 }
 
@@ -39,7 +39,7 @@ main {
     width: 30em;
 }
 
-.divMain {
+.div_main {
     margin: 10%;
     padding: 3%;
     background-color: cyan;
@@ -55,7 +55,7 @@ label {
     margin: 5%;
 }
 
-.div_btnIngredients {
+.div_bouton_ingredients {
     margin: 5% 38%;
 }
 
@@ -71,7 +71,7 @@ input {
 }
 
 /* BOUTON PLUS ET MOINS */
-.btnMoins {
+.bouton_moins {
     background-color: white;
     margin: 5% 5% 0% 28%;
     width: 7%;
@@ -80,7 +80,7 @@ input {
     border-end-end-radius: 30%;
 }
 
-.btnPlus {
+.bouton_plus {
     background-color: white;
     margin: 5% 28% 0% 5%;
     width: 7%;
@@ -89,13 +89,13 @@ input {
     border-end-end-radius: 30%;
 }
 
-.btnMoins:hover,
-.btnPlus:hover {
+.bouton_moins:hover,
+.bouton_plus:hover {
     background-color: whitesmoke
 }
 
-.btnMoins:active,
-.btnPlus:active {
+.bouton_moins:active,
+.bouton_plus:active {
     background-color: whitesmoke;
     border: 1px solid black;
 }
@@ -108,7 +108,7 @@ input {
 }
 
 /* BOUTON INGREDIENTS */
-#btnIngredients {
+#bouton_ingredients {
     justify-self: center;
     background-color: rgb(249, 231, 208);
     color: brown;
@@ -118,16 +118,16 @@ input {
     border-radius: 4.5em;
 }
 
-#btnIngredients:hover {
+#bouton_ingredients:hover {
     background-color: rgb(239, 219, 192);
 }
 
-#btnIngredients:active {
+#bouton_ingredients:active {
     border: none;
 }
 
 /* ANIMATION JS */
-.aff {
+.affichage_resultat {
     opacity: 1;
     transition-duration: 1s;
 }

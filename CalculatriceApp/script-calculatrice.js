@@ -1,6 +1,6 @@
 // FONCTION RETOUR
-const back = document.getElementById('back');
-back.addEventListener('click', () => {
+const retour = document.getElementById('bouton_retour');
+retour.addEventListener('click', () => {
     location.replace('http://localhost/testfolio/Menu/index.html')
 });
 
@@ -13,7 +13,7 @@ class calculatrice {
     };
 
     // METHODE POUR LES NOMBRES
-    verifierValeurs(nb) {
+    verifier_valeurs(nb) {
         if (this.operateur == '') {
             this.valeurA += nb;
             document.getElementById('affichage').textContent = `${this.valeurA}`;
@@ -24,7 +24,7 @@ class calculatrice {
     };
 
     // METHODE POUR OPERATEURS
-    verifierOperateur(operateur) {
+    verifie_operateur(operateur) {
         this.operateur = operateur;
         document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur}`;
     };
@@ -59,4 +59,4 @@ class calculatrice {
     };
 };
 
-const maCalculatrice = new calculatrice();
+const ma_malculatrice = new calculatrice();

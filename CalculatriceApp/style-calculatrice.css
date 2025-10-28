@@ -12,7 +12,7 @@ header {
     align-self: center;
 }
 
-.btnBack {
+.bouton_retour {
     background-color: white;
     font-weight: bold;
     color: darkblue;
@@ -23,14 +23,14 @@ header {
     transition: rotate, 1s;
 }
 
-.btnBack:hover {
+.bouton_retour:hover {
     background-color: black;
     color: red;
     border: 1px solid red;
     rotate: 360deg;
 }
 
-.btnBack:active {
+.bouton_retour:active {
     border: none;
 }
 
@@ -78,7 +78,7 @@ section {
     width: 30%;
 }
 
-button:not(.btnBack) {
+button:not(.bouton_retour) {
     margin: 1%;
     background-color: cornflowerblue;
     border: 1px solid white;
@@ -86,10 +86,10 @@ button:not(.btnBack) {
     height: 4.6em;
 }
 
-button:not(.btnBack):hover {
+button:not(.bouton_retour):hover {
     background-color: rgba(100, 148, 237, 0.81);
 }
 
-button:not(.btnBack):active {
+button:not(.bouton_retour):active {
     background-color: rgb(147, 179, 238);
 }

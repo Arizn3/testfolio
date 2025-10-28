@@ -1,6 +1,6 @@
 // BOUTON MENU
-const back = document.getElementById('bouton_menu');
-back.addEventListener('click', () => {
+const retour = document.getElementById('bouton_menu');
+retour.addEventListener('click', () => {
     location.replace('http://localhost/testfolio/Menu/index.html');
 });
 

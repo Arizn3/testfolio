@@ -4,6 +4,36 @@ back.addEventListener('click', () => {
     window.location.replace('http://localhost/testfolio/Menu/index.html');
 });
 
+//DATA FONCTIONS
+class Data {
+    constructor(id) {
+        this.id = id;
+        this.formulaire = document.getElementById(id);
+        this.objData = new FormData(this.formulaire);
+        this.array = new Array();
+    };
+    
+    //ENVOIE DANS LE LOCALSTORAGE POUR LE MOMENT
+    sendData() {
+        this.objData = new FormData(this.formulaire);
+        this.objData.forEach((value, key) => {
+            if (value !== '') {
+                this.array.push([key, value]);
+            };
+        });
+        let JSONarray = JSON.stringify(this.array);
+        localStorage.setItem('test', JSONarray)
+        document.getElementById('data').reset();
+    };
+};
+
+const myData = new Data('data');
+
+const enregistrement = document.getElementById('valider');
+enregistrement.addEventListener('click', () => {
+    myData.sendData();
+});
+
 //FONCTIONS D'ANIMATIONS JS/CSS
 function getDiv(id) {
     return document.getElementById(id).parentNode
@@ -40,34 +70,4 @@ boutonBack.addEventListener('click', () => {
     removeStyle('retour');
     removeStyle('nom');
     removeStyle('age');
-});
-
-//DATA FONCTIONS
-class Data {
-    constructor(id) {
-        this.id = id;
-        this.formulaire = document.getElementById(id);
-        this.objData = new FormData(this.formulaire);
-        this.array = new Array();
-    };
-
-    //ENVOIE DANS LE LOCALSTORAGE POUR LE MOMENT
-    sendData() {
-        this.objData = new FormData(this.formulaire);
-        this.objData.forEach((value, key) => {
-            if (value !== '') {
-                this.array.push([key, value]);
-            };
-        });
-        let JSONarray = JSON.stringify(this.array);
-        localStorage.setItem('test', JSONarray)
-        document.getElementById('data').reset();
-    };
-};
-
-const myData = new Data('data');
-
-const enregistrement = document.getElementById('valider');
-enregistrement.addEventListener('click', () => {
-    myData.sendData();
 });

@@ -13,7 +13,7 @@ class calculatrice {
     };
 
     // METHODE POUR LES NOMBRES
-    verifier_valeurs(nb) {
+    verifie_valeurs(nb) {
         if (this.operateur == '') {
             this.valeurA += nb;
             document.getElementById('affichage').textContent = `${this.valeurA}`;

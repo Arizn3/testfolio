@@ -30,7 +30,7 @@ header {
     margin: 10% 1% 1% 1%;
 }
 
-.btnRetour {
+.bouton_menu {
     background-color: white;
     font-weight: bold;
     color: darkblue;
@@ -41,14 +41,14 @@ header {
     transition: rotate, 1s;
 }
 
-.btnRetour:hover {
+.bouton_menu:hover {
     background-color: black;
     color: red;
     border: 1px solid red;
     rotate: 360deg;
 }
 
-.btnRetour:active {
+.bouton_menu:active {
     border: none;
 }
 
@@ -127,7 +127,7 @@ button img {
     text-align: center;
 }
 
-#rangeIntensiter, #choixCouleurs {
+#rangeIntensiter, #choix_couleurs {
     transition-duration: 1s;
     border: 1px solid black;
 }

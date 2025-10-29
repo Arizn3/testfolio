@@ -10,6 +10,7 @@ class calculatrice {
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
+        this.resultat = '';
     };
 
     // METHODE POUR LES NOMBRES
@@ -31,31 +32,31 @@ class calculatrice {
 
     // METHODE POUR RESULTAT
     operation() {
-        let resultat = '';
         this.valeurA = parseInt(this.valeurA);
         this.valeurB = parseInt(this.valeurB);
         switch (this.operateur) {
             case "+":
-                resultat = this.valeurA + this.valeurB;
+                this.resultat = this.valeurA + this.valeurB;
                 break;
             case "-":
-                resultat = this.valeurA - this.valeurB;
+                this.resultat = this.valeurA - this.valeurB;
                 break;
             case "*":
-                resultat = this.valeurA * this.valeurB;
+                this.resultat = this.valeurA * this.valeurB;
                 break;
             case "/":
-                resultat = this.valeurA / this.valeurB;
+                this.resultat = this.valeurA / this.valeurB;
                 break;
         };
 
         // AFFICHAGE DE LA REPONSE
-        document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur} ${this.valeurB} = ${resultat}`;
+        document.getElementById('affichage').textContent = `${this.valeurA} ${this.operateur} ${this.valeurB} = ${this.resultat}`;
 
         // RESET
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
+        this.resultat = '';
     };
 };
 

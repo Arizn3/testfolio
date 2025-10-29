@@ -1,21 +1,21 @@
 // BOUTON RETOUR AU MENU
-const back = document.getElementById('btnRetour');
-back.addEventListener('click', () => {
+const retour_menu = document.getElementById('bouton_menu');
+retour_menu.addEventListener('click', () => {
     location.replace('http://localhost/testfolio/Menu/index.html')
 });
 
 // CLASS OPEN WEATHER
 class OpenWeather {
 
-    constructor(apiKey) {
-        this.apiKey = apiKey;
+    constructor(cle_api) {
+        this.cle_api = cle_api;
     };
 
     // METHODES D'INSTANCE PRINCIPALE
-    afficheData() {
-        const city = document.getElementById('localisation').value;
+    affiche_temperature() {
+        const zone = document.getElementById('localisation').value;
         const affichage = document.getElementById('affichage');
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=metric&lang=fr`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${zone}&appid=${this.cle_api}&units=metric&lang=fr`;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -26,48 +26,47 @@ class OpenWeather {
             .then(data => {
                 const temperature = data.main.temp;
                 affichage.innerText = temperature + '°C';
-                this.afficheName(data);
+                this.affichage_zone(data);
             })
             .catch(error => {
                 alert('Indiquez une ville ou une région éxistante.');
             });
     };
 
-    afficheName(dt) {
-        const country = dt.sys.country;
-        const name = dt.name;
-        const zone = `${country} ${name}`;
+    affichage_zone(dt) {
+        const region = dt.sys.country;
+        const nom = dt.name;
+        const zone = `${region} ${nom}`;
         document.getElementById('localisation').value = zone;
     };
 };
 
 // CLÉ API 
-const key = '628c02c4a8605707c0065a6615d27e84';
+const cle_api = '';
 
 // APPEL DE LA METHODE PRINCIPALE EN CRÉANT UNE INSTANCE
-const btnIndique = document.getElementById('btnRecherche');
-btnIndique.addEventListener('click', () => {
-    const monApi = new OpenWeather(key);
-    monApi.afficheData()
+const bouton_recherche = document.getElementById('bouton_recherche');
+bouton_recherche.addEventListener('click', () => {
+    const mon_api = new OpenWeather(cle_api);
+    mon_api.affiche_temperature()
 });
 addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
-        const monApi = new OpenWeather(key);
-        monApi.afficheData()
+        const mon_api = new OpenWeather(cle_api);
+        mon_api.affiche_temperature()
     }
 });
 
 // CLASS DECORATEUR
 class decorateur {
-    constructor() {
-        this.body = document.querySelector('body');
-        this.backGround = document.querySelector('video');
-        this.main = document.querySelector('main');
-        this.input = document.querySelector('input');
-        this.affichage_id = document.getElementById('id_affichage');
-        this.affichage = document.getElementById('affichage');
-        this.input_text = document.getElementById('localisation');
-    };
+
+    body = document.querySelector('body');
+    backGround = document.querySelector('video');
+    main = document.querySelector('main');
+    input = document.querySelector('input');
+    affichage_id = document.getElementById('id_affichage');
+    affichage = document.getElementById('affichage');
+    input_text = document.getElementById('localisation');
 
     // METHODE ADD CSS 
     addCSS(element, id) {
@@ -82,22 +81,22 @@ class decorateur {
     // METHODE DARK MODE
     darkmode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_fumee.mp4");
-        this.addCSS(this.body, 'darkBody');
-        this.addCSS(this.main, 'darkMain');
-        this.addCSS(this.input, 'darkInput');
-        this.addCSS(this.affichage_id, 'darkInput');
+        this.addCSS(body, 'darkBody');
+        this.addCSS(main, 'darkMain');
+        this.addCSS(input, 'darkInput');
+        this.addCSS(affichage_id, 'darkInput');
     };
     // METHODE COULEUR
-    couleurMode() {
+    mode_couleur() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_ciel.mp4");
-        this.removeCSS(this.body, 'darkBody');
-        this.removeCSS(this.main, 'darkMain');
-        this.removeCSS(this.input, 'darkInput');
-        this.removeCSS(this.affichage_id, 'darkInput');
+        this.removeCSS(body, 'darkBody');
+        this.removeCSS(main, 'darkMain');
+        this.removeCSS(input, 'darkInput');
+        this.removeCSS(affichage_id, 'darkInput');
     };
     // METHODE CHOIX DE COULEURS AVEC CONDITION
-    choixDeCouleur() {
-        let couleur = document.getElementById('choixCouleurs').value;
+    choix_couleurs() {
+        let couleur = document.getElementById('choix_couleurs').value;
         if (couleur == '#ffffff') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#000000';
@@ -126,11 +125,11 @@ choix_A.addEventListener('change', () => {
 // APPEL DU MODE COULEUR
 const choix_B = document.getElementById('colorMode');
 choix_B.addEventListener('change', () => {
-    test_A.couleurMode();
+    test_A.mode_couleur();
 });
 
 // APPEL DE LA FONCTION CHOIX DE COULEURS AVEC CONDITIONS
-const couleurBtn = document.getElementById('choixCouleurs')
-couleurBtn.addEventListener('input', () => {
-    test_A.choixDeCouleur();
+const bouton_couleur = document.getElementById('choix_couleurs')
+bouton_couleur.addEventListener('input', () => {
+    test_A.choix_couleurs();
 });

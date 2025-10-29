@@ -79,7 +79,7 @@ class decorateur {
     };
 
     // METHODE DARK MODE
-    darkmode() {
+    dark_mode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_fumee.mp4");
         this.addCSS(body, 'darkBody');
         this.addCSS(main, 'darkMain');
@@ -117,9 +117,9 @@ class decorateur {
 const test_A = new decorateur();
 
 // APPEL DU DARKMODE
-const choix_A = document.getElementById('darkMode');
+const choix_A = document.getElementById('dark_mode');
 choix_A.addEventListener('change', () => {
-    test_A.darkmode();
+    test_A.dark_mode();
 });
 
 // APPEL DU MODE COULEUR

@@ -1,70 +1,70 @@
-//FONCTION BACK
-const back = document.getElementById('back');
-back.addEventListener('click', () => {
+//RETOUR AU MENU
+const retour = document.getElementById('retourMenu');
+retour.addEventListener('click', () => {
     window.location.replace('http://localhost/testfolio/Menu/index.html');
 });
 
-//DATA FONCTIONS
-class Data {
+//FORMULAIRE FONCTIONS
+class Formulaire {
     constructor(id) {
         this.id = id;
         this.formulaire = document.getElementById(id);
-        this.objData = new FormData(this.formulaire);
-        this.array = new Array();
+        this.objetFormulaire = new FormData(this.formulaire);
+        this.liste = new Array();
     };
-    
+
     //ENVOIE DANS LE LOCALSTORAGE POUR LE MOMENT
-    sendData() {
-        this.objData = new FormData(this.formulaire);
-        this.objData.forEach((value, key) => {
+    envoieFormulaire() {
+        this.objetFormulaire = new FormData(this.formulaire);
+        this.objetFormulaire.forEach((value, key) => {
             if (value !== '') {
-                this.array.push([key, value]);
+                this.liste.push([key, value]);
             };
         });
-        let JSONarray = JSON.stringify(this.array);
-        localStorage.setItem('test', JSONarray)
-        document.getElementById('data').reset();
+        let JSONListe = JSON.stringify(this.liste);
+        localStorage.setItem('test', JSONListe)
+        document.getElementById('formulaire').reset();
     };
 };
 
-const myData = new Data('data');
+const monFormulaire = new Formulaire('formulaire');
 
 const enregistrement = document.getElementById('valider');
 enregistrement.addEventListener('click', () => {
-    myData.sendData();
+    monFormulaire.envoieFormulaire();
 });
 
 //FONCTIONS D'ANIMATIONS JS/CSS
-function getDiv(id) {
+function recupereDiv(id) {
     return document.getElementById(id).parentNode
 };
 
-function ModifieStyle(id) {
-    getDiv(id).classList.add('aff');
+function modifieStyle(id) {
+    recupereDiv(id).classList.add('aff');
 };
 
 function removeStyle(id) {
-    getDiv(id).classList.remove('aff');
+    recupereDiv(id).classList.remove('aff');
 };
 
 const boutonInscription = document.getElementById('changement');
 boutonInscription.addEventListener('click', () => {
     document.getElementById('titre').textContent = "Crée ton compte !";
-    getDiv('changement').classList.add('disp');
-    getDiv('connexion').classList.add('disp');
-    ModifieStyle('paragraphe');
-    ModifieStyle('valider');
-    ModifieStyle('retour');
-    ModifieStyle('nom');
-    ModifieStyle('age');
+    recupereDiv('changement').classList.add('disp');
+    recupereDiv('connexion').classList.add('disp');
+    modifieStyle('paragraphe');
+    modifieStyle('valider');
+    modifieStyle('retour');
+    modifieStyle('nom');
+    modifieStyle('age');
 });
 
 const boutonBack = document.getElementById('retour');
 boutonBack.addEventListener('click', () => {
     document.getElementById('titre').textContent = "Bienvenue !";
-    document.getElementById('data').reset();
-    getDiv('changement').classList.remove('disp');
-    getDiv('connexion').classList.remove('disp');
+    document.getElementById('formulaire').reset();
+    recupereDiv('changement').classList.remove('disp');
+    recupereDiv('connexion').classList.remove('disp');
     removeStyle('paragraphe');
     removeStyle('valider');
     removeStyle('retour');

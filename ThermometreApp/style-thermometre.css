@@ -25,12 +25,12 @@ header {
 }
 
 /* BOUTON RETOUR */
-.div_retour {
+.divRetour {
     text-align: center;
     margin: 10% 1% 1% 1%;
 }
 
-.bouton_menu {
+.boutonMenu {
     background-color: white;
     font-weight: bold;
     color: darkblue;
@@ -41,14 +41,14 @@ header {
     transition: rotate, 1s;
 }
 
-.bouton_menu:hover {
+.boutonMenu:hover {
     background-color: black;
     color: red;
     border: 1px solid red;
     rotate: 360deg;
 }
 
-.bouton_menu:active {
+.boutonMenu:active {
     border: none;
 }
 
@@ -68,7 +68,7 @@ main {
 }
 
 /* DIV AFFICHAGE */
-.div_affichage {
+.divAffichage {
     background-color: #ffffff;
     border: 1px solid black;
     margin: 10% 1% 1% 35%;
@@ -101,7 +101,7 @@ button img {
 }
 
 /* DIV INDICATION */
-.div_indication {
+.divIndication {
     text-align: center;
     margin: 5% auto;
     letter-spacing: 1%;
@@ -113,12 +113,12 @@ button img {
     transition-duration: 1s;
 }
 
-.div_recherche {
+.divRecherche {
     margin-top: 2%;
 }
 
 /* DIV REGLAGES */
-.div_reglages {
+.divReglages {
     margin: 1% 20% 1% 20%;
     height: 25%;
     display: flex;
@@ -127,7 +127,7 @@ button img {
     text-align: center;
 }
 
-#rangeIntensiter, #choix_couleurs {
+#rangeIntensiter, #choixCouleurs {
     transition-duration: 1s;
     border: 1px solid black;
 }

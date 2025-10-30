@@ -29,7 +29,7 @@ p {
 }
 
 /* CONTAINER CREE DANS UNE DIV */
-#game-board {
+#tableauDeJeu {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
@@ -38,42 +38,42 @@ p {
 }
 
 /* CLASSE DES ELEMENTS PARENT CREE */
-.card {
+.carte {
     background-color: #ccc;
     border-radius: 5px;
     cursor: pointer;
 }
 
 /* CLASSE DES ELEMENTS ENFANT CREE (CARTES) */
-.card .card-content {
+.carte .imageCarte {
     opacity: 0;
 }
 
-.card .card-content {
+.carte .imageCarte {
     max-width: 100%;
 }
 
-.card.flip .card-content {
+.carte.flip .imageCarte {
     opacity: 1;
 }
 
 /* CLASSE DES ELEMENTS PAIRES TROUVEES */
-.card.matched {
+.carte.matched {
     border: solid 4px rgb(0, 255, 0);
     box-sizing: border-box;
     cursor: default;
 }
 
 /* STYLE POUR ANIMATION */
-.card.flip {
+.carte.flip {
     transform: rotateY(180deg);
 }
 
-.card .card.card-content {
+.card .card.imageCarte {
     transition: all 0.3s;
 }
 
-.card {
+.carte {
     transform: rotateY(0deg);
     transition: all 0.5s;
 }

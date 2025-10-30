@@ -17,32 +17,12 @@ connection.connect((err) => {
 });
 
 // QUERY
-connection.query("SELECT id, age FROM utilisateurs",(err, rows, fileds) => {
-    if(err) throw err;
-    console.log("Les données sont : ", rows);
-})
+connection.query("SELECT id, age FROM utilisateurs", (err, rows, fileds) => {
+    if (err) throw err;
+    console.log("Les données sont : ");
+    for (const row of rows) {
+        console.log(row[id] +' : '+ row[age]);
+    };
+});
 
 connection.end();
-
-
-
-
-
-
-
-class historique {
-
-    constructor(valeur){
-        this.valeur = valeur;
-        this.resultat = document.getElementById(id).value;
-    };
-
-    sauvegarde_data() {
-
-    };
-
-    recuperation_data() {
-
-    };
-
-};

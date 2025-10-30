@@ -1,5 +1,5 @@
 // BOUTON RETOUR AU MENU
-const retour_menu = document.getElementById('bouton_menu');
+const retour_menu = document.getElementById('boutonMenu');
 retour_menu.addEventListener('click', () => {
     location.replace('http://localhost/testfolio/Menu/index.html')
 });
@@ -7,15 +7,15 @@ retour_menu.addEventListener('click', () => {
 // CLASS OPEN WEATHER
 class OpenWeather {
 
-    constructor(cle_api) {
-        this.cle_api = cle_api;
+    constructor(cleApi) {
+        this.cleApi = cleApi;
     };
 
     // METHODES D'INSTANCE PRINCIPALE
-    affiche_temperature() {
+    afficheTemperature() {
         const zone = document.getElementById('localisation').value;
         const affichage = document.getElementById('affichage');
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${zone}&appid=${this.cle_api}&units=metric&lang=fr`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${zone}&appid=${this.cleApi}&units=metric&lang=fr`;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -26,14 +26,14 @@ class OpenWeather {
             .then(data => {
                 const temperature = data.main.temp;
                 affichage.innerText = temperature + '°C';
-                this.affichage_zone(data);
+                this.affichageZone(data);
             })
             .catch(error => {
                 alert('Indiquez une ville ou une région éxistante.');
             });
     };
 
-    affichage_zone(dt) {
+    affichageZone(dt) {
         const region = dt.sys.country;
         const nom = dt.name;
         const zone = `${region} ${nom}`;
@@ -42,18 +42,18 @@ class OpenWeather {
 };
 
 // CLÉ API 
-const cle_api = '';
+const cleApi = '';
 
 // APPEL DE LA METHODE PRINCIPALE EN CRÉANT UNE INSTANCE
-const bouton_recherche = document.getElementById('bouton_recherche');
-bouton_recherche.addEventListener('click', () => {
-    const mon_api = new OpenWeather(cle_api);
-    mon_api.affiche_temperature()
+const boutonRecherche = document.getElementById('boutonRecherche');
+boutonRecherche.addEventListener('click', () => {
+    const monApi = new OpenWeather(cleApi);
+    monApi.afficheTemperature()
 });
 addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
-        const mon_api = new OpenWeather(cle_api);
-        mon_api.affiche_temperature()
+        const monApi = new OpenWeather(cleApi);
+        monApi.afficheTemperature()
     }
 });
 
@@ -64,9 +64,9 @@ class decorateur {
     backGround = document.querySelector('video');
     main = document.querySelector('main');
     input = document.querySelector('input');
-    affichage_id = document.getElementById('id_affichage');
+    affichageId = document.getElementById('idAffichage');
     affichage = document.getElementById('affichage');
-    input_text = document.getElementById('localisation');
+    inputText = document.getElementById('localisation');
 
     // METHODE ADD CSS 
     addCSS(element, id) {
@@ -79,12 +79,12 @@ class decorateur {
     };
 
     // METHODE DARK MODE
-    dark_mode() {
+    darkMode() {
         this.backGround.setAttribute('src', "/testfolio/img/IA.appThermometre_videobg_fumee.mp4");
         this.addCSS(body, 'darkBody');
         this.addCSS(main, 'darkMain');
         this.addCSS(input, 'darkInput');
-        this.addCSS(affichage_id, 'darkInput');
+        this.addCSS(affichageId, 'darkInput');
     };
     // METHODE COULEUR
     mode_couleur() {
@@ -92,21 +92,21 @@ class decorateur {
         this.removeCSS(body, 'darkBody');
         this.removeCSS(main, 'darkMain');
         this.removeCSS(input, 'darkInput');
-        this.removeCSS(affichage_id, 'darkInput');
+        this.removeCSS(affichageId, 'darkInput');
     };
     // METHODE CHOIX DE COULEURS AVEC CONDITION
-    choix_couleurs() {
-        let couleur = document.getElementById('choix_couleurs').value;
+    choixCouleurs() {
+        let couleur = document.getElementById('choixCouleurs').value;
         if (couleur == '#ffffff') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#000000';
-            this.affichage_id.style.borderColor = '#000000';
-            this.input_text.style.borderBlockColor = '#000000';
+            this.affichageId.style.borderColor = '#000000';
+            this.inputText.style.borderBlockColor = '#000000';
         } else if (couleur == '#000000') {
             this.main.style.backgroundColor = couleur;
             this.main.style.color = '#ffffff';
-            this.affichage_id.style.borderColor = '#ffffff';
-            this.input_text.style.borderBlockColor = '#ffffff';
+            this.affichageId.style.borderColor = '#ffffff';
+            this.inputText.style.borderBlockColor = '#ffffff';
         } else {
             this.main.style.backgroundColor = couleur;
         };
@@ -114,22 +114,22 @@ class decorateur {
 };
 
 // INSTANCE DE LA CLASSE DECORATEUR
-const test_A = new decorateur();
+const testA = new decorateur();
 
 // APPEL DU DARKMODE
-const choix_A = document.getElementById('dark_mode');
-choix_A.addEventListener('change', () => {
-    test_A.dark_mode();
+const choixA = document.getElementById('darkMode');
+choixA.addEventListener('change', () => {
+    testA.darkMode();
 });
 
 // APPEL DU MODE COULEUR
-const choix_B = document.getElementById('colorMode');
-choix_B.addEventListener('change', () => {
-    test_A.mode_couleur();
+const choixB = document.getElementById('colorMode');
+choixB.addEventListener('change', () => {
+    testA.mode_couleur();
 });
 
 // APPEL DE LA FONCTION CHOIX DE COULEURS AVEC CONDITIONS
-const bouton_couleur = document.getElementById('choix_couleurs')
-bouton_couleur.addEventListener('input', () => {
-    test_A.choix_couleurs();
+const boutonCouleur = document.getElementById('choixCouleurs')
+boutonCouleur.addEventListener('input', () => {
+    testA.choixCouleurs();
 });

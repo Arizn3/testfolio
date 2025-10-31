@@ -6,22 +6,26 @@ class ConnexionHistorique {
         this.idConnexion = idConnexion;
     };
 
-    insertionQuery() {
+    insertionQuery(expression) {
+
+        // CONNEXION
         this.idConnexion.connect((err) => {
             if (err) throw err;
             console.log('Connexion établie');
         });
+
+        // USE TABLE
         this.idConnexion.query(
             "USE testfolio", (err, rows, fields) => {
                 if (err) throw err;
             });
-            this.idConnexion.query(
-            "SELECT * FROM calculatrice_historique", (err, rows, fields) => {
-                if (err) throw err;
-                for (const row of rows) {
-                console.log(row.expression);
-                };
-            });
+
+        //SQL INSERT
+        this.idConnexion.query("INSERT INTO calculatrice_historique (id,expression) VALUES(id,?)", [expression], (err)=>{
+            if(err) throw err;
+        });
+
+        // DECONNEXION
         this.idConnexion.end();
     };
 };

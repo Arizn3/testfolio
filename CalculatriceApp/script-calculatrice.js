@@ -12,7 +12,6 @@ class Calculatrice {
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
-        this.resultat = '';
     };
     verifieValeurs(nb) {
         if (this.operateur == '') {
@@ -33,7 +32,6 @@ class Calculatrice {
         this.valeurA = '';
         this.valeurB = '';
         this.operateur = '';
-        this.resultat = '';
     };
     clear() {
         this.valeurA = '';
@@ -72,6 +70,7 @@ const Calcule = {
 
     envoieHistorique: (expression) => {
         const instanceHistorique = new Historique(expression);
+        instanceHistorique.sauvegardeHistorique();
     }
 };
 
@@ -81,7 +80,7 @@ class Historique {
         this.expression = expression;
     };
     sauvegardeHistorique() {
-
+        maConnexion.insertionQuery(this.expression);
         recuperationHistorique();
     };
 
@@ -89,8 +88,13 @@ class Historique {
 };
 
 //INSTANCE
-const maMalculatrice = new Calculatrice();
+const maCalculatrice = new Calculatrice();
 
-
-// TEST QUERY
-maConnexion.insertionQuery();
+// maCalculatrice.verifieValeurs('1');
+// maCalculatrice.verifieValeurs('5');
+// console.log(maCalculatrice.valeurA);
+// maCalculatrice.verifieOperateur('+');
+// maCalculatrice.verifieValeurs('2');
+// maCalculatrice.verifieValeurs('0');
+// console.log(maCalculatrice.operateur);
+// console.log(maCalculatrice.valeurB);

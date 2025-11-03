@@ -43,4 +43,9 @@ const connexionParametre = mysql.createConnection({
 const instanceConnexion = new ConnexionHistorique(connexionParametre);
 
 // EXPORTS
+
 module.exports = instanceConnexion;
+
+// TESTE
+
+// export const maConnexion = instanceConnexion;

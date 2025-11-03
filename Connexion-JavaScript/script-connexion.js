@@ -1,7 +1,7 @@
 //RETOUR AU MENU
 const retour = document.getElementById('retourMenu');
 retour.addEventListener('click', () => {
-    window.location.replace('http://localhost/testfolio/Menu/index.html');
+    window.location.replace('http://localhost/testfolio/Menu-JavaScript/index.html');
 });
 
 //FORMULAIRE FONCTIONS

@@ -1,7 +1,7 @@
 // BOUTON MENU
 const retour = document.getElementById('boutonMenu');
 retour.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Menu/index.html');
+    location.replace('http://localhost/testfolio/Menu-JavaScript/index.html');
 });
 
 // CLASSE CALCULATEUR DE CREPE

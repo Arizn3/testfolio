@@ -1,7 +1,7 @@
 // BOUTON RETOUR AU MENU
 const retour_menu = document.getElementById('boutonMenu');
 retour_menu.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Menu/index.html')
+    location.replace('http://localhost/testfolio/Menu-JavaScript/index.html')
 });
 
 // CLASS OPEN WEATHER

@@ -1,10 +1,11 @@
-
+import {maConnexion} from "./script-conect.js";
+// const {maConnexion} = require("./script-conect.js");
 
 // FONCTION RETOUR
-const retour = document.getElementById('boutonRetour');
-retour.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Menu-JavaScript/index.html')
-});
+// const retour = document.getElementById('boutonRetour');
+// retour.addEventListener('click', () => {
+//     location.replace('http://localhost/testfolio/Menu-JavaScript/index.html')
+// });
 
 // CLASS CALCULATRICE
 class Calculatrice {
@@ -89,21 +90,3 @@ class Historique {
 
 //INSTANCE
 const maCalculatrice = new Calculatrice();
-
-// maCalculatrice.verifieValeurs('3');
-// maCalculatrice.verifieValeurs('0');
-// maCalculatrice.verifieOperateur('+');
-// maCalculatrice.verifieValeurs('1');
-// maCalculatrice.verifieValeurs('0');
-
-// console.log(maCalculatrice.valeurA);
-// console.log(maCalculatrice.operateur);
-// console.log(maCalculatrice.valeurB);
-
-
-
-// PB
-
-// import { maConnexion } from './script-conect.mjs';
-
-const maConnexion = require("./script-conect");

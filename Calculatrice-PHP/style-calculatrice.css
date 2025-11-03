@@ -1,0 +1,95 @@
+/* CONTAINER */
+body {
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+/* BOUTON MENU */
+header {
+    margin: 5% auto;
+    align-self: center;
+}
+
+.boutonRetour {
+    background-color: white;
+    font-weight: bold;
+    color: darkblue;
+    width: 6em;
+    height: 6em;
+    border-radius: 3em;
+    border: 1px solid black;
+    transition: rotate, 1s;
+}
+
+.boutonRetour:hover {
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    rotate: 360deg;
+}
+
+.boutonRetour:active {
+    border: none;
+}
+
+
+/* MAIN */
+main {
+    margin: 5% auto;
+    width: 30em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* AFFICHAGE */
+.divAffichageResultat {
+    width: 50%;
+    border: 1px solid white;
+    background-color: black;
+}
+
+p {
+    place-content: center;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    color: aliceblue;
+    height: 5em;
+}
+
+/* BOUTONS */
+section {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.nombres {
+    margin: 3%;
+    width: 40%;
+}
+
+.operateurs {
+    margin: 3%;
+    width: 30%;
+}
+
+button:not(.boutonRetour) {
+    margin: 1%;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    width: 4.6em;
+    height: 4.6em;
+}
+
+button:not(.boutonRetour):hover {
+    background-color: rgba(100, 148, 237, 0.81);
+}
+
+button:not(.boutonRetour):active {
+    background-color: rgb(147, 179, 238);
+}

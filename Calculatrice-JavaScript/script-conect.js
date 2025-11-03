@@ -1,4 +1,6 @@
-const mysql = require("mysql");
+import mysql from "mysql2";
+// const mysql = require("mysql");
+
 
 class ConnexionHistorique {
 
@@ -42,10 +44,7 @@ const connexionParametre = mysql.createConnection({
 // INSTANCE 
 const instanceConnexion = new ConnexionHistorique(connexionParametre);
 
-// EXPORTS
-
-module.exports = instanceConnexion;
 
 // TESTE
-
-// export const maConnexion = instanceConnexion;
+// module.exports = {instanceConnexion};
+export const maConnexion = {instanceConnexion};

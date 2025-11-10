@@ -1,9 +1,9 @@
-const maConnexion = require('./script-conect.js');
+const maDB = require('./script-sqlite.js');
 
 // FONCTION RETOUR
 // const retour = document.getElementById('boutonRetour');
 // retour.addEventListener('click', () => {
-//     location.replace('http://localhost/testfolio/Menu/index.html')
+//     location.replace('http://localhost/testfolio/Menu-JavaScript/index.html')
 // });
 
 // CLASS CALCULATRICE
@@ -79,12 +79,16 @@ class Historique {
     constructor(expression) {
         this.expression = expression;
     };
+
     sauvegardeHistorique() {
-        maConnexion.insertionQuery(this.expression);
+        // METHODE QUERY DE LA CLASS POUR ENREGISTRER LES DONNEES
         recuperationHistorique();
+        // METHODE QUERY DE LA CLASS QUI AFFICHE LES DONNES
     };
 
-    recuperationHistorique() { };
+    recuperationHistorique() {
+        // INSTRUCTIONS POUR AFFICHER LES DONNÉES
+    };
 };
 
 //INSTANCE

@@ -22,7 +22,7 @@
             <div class="nombres">
                 <button>1</button>
                 <button>2</button>
-                <button>3</button>
+                <button> <?php echo 3?> 3</button>
                 <br>
                 <button>4</button>
                 <button>5</button>

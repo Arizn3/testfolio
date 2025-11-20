@@ -1,4 +1,4 @@
-const maDB = require('./script-sqlite.js');
+// const maDB = require('./script-sqlite.js');
 
 // FONCTION RETOUR
 // const retour = document.getElementById('boutonRetour');

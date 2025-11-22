@@ -10,18 +10,16 @@ db.exec(`CREATE TABLE IF NOT EXISTS historique (
 // MES METHODES
 const getAll = db.prepare("SELECT * FROM historique");
 const deleteAll = db.prepare("DELETE FROM historique");
-const insert = db.prepare("INSERT INTO historique (expression) VALUES ('3 + 9 = 12');");
 
-
-// INSERTION DE DONNEES TEST
+// INSERTION DE DONNEES -> TEST
+// const insert = db.prepare("INSERT INTO historique (expression) VALUES ('3 + 9 = 12');");
 // const testA = insert.run();
 
+// APPEL DE LA TABLE -> TEST
+// const testB = getAll.all();
+// testB.forEach(occurrence => {
+//     console.log(`ID: ${occurrence.id}, Resultat: ${occurrence.expression}`);
+// });
 
-// APPEL DE LA TABLE TEST
-const testB = getAll.all();
-testB.forEach(occurrence => {
-    console.log(`ID: ${occurrence.id}, Resultat: ${occurrence.expression}`);
-});
-
-// SUPPRIME TABLE TEST
-const effaceTable = deleteAll.run();
+// SUPPRIME TABLE -> TEST
+// const effaceTable = deleteAll.run();

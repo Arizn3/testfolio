@@ -3,19 +3,19 @@ const replace = () => {
     let choix = document.getElementById('listeFonctions').value;
     switch (choix) {
         case "Calculatrice JS":
-            location.replace("http://localhost/testfolio/Calculatrice-JavaScript/")
+            location.replace("/Users/lucas/Documents/Projets/App-Front/Calculatrice/index.html")
             break;
         case "Connexion JS":
-            location.replace("http://localhost/testfolio/Connexion-JavaScript/")
+            location.replace("/Users/lucas/Documents/Projets/App-Front/Connexion/index.html")
             break;
         case "Crêperie JS":
-            location.replace("http://localhost/testfolio/Creperie-JavaScript/")
+            location.replace("/Users/lucas/Documents/Projets/App-Front/Creperie/index.html")
             break;
         case "Thermomètre JS":
-            location.replace("http://localhost/testfolio/Thermometre-JavaScript/")
+            location.replace("/Users/lucas/Documents/Projets/App-Front/Thermometre/index.html")
             break;
         case "Memory Game JS":
-            location.replace("http://localhost/testfolio/MemoryGame-JavaScript/")
+            location.replace("/Users/lucas/Documents/Projets/App-Front/MemoryGame/index.html")
             break;
         default:
             alert("Veuillez choisir une application")

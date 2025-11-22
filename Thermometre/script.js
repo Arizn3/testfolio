@@ -6,7 +6,7 @@ import { classDecorateur } from "./class_decorateur.js";
 // BOUTON RETOUR AU MENU
 const retour_menu = document.getElementById('boutonMenu');
 retour_menu.addEventListener('click', () => {
-    location.replace('/Users/lucas/Documents/Projets/App-Front/Menu-JavaScript/index.html');
+    location.replace('/Users/lucas/Documents/Projets/App-Front/Menu/index.html');
 });
 
 // APPEL DE LA METHODE PRINCIPALE DE LA CLASS OPEN WEATHER

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- APPLICATION EN HTML / CSS / JS QUI PERMET DE RÉCUPÉRER UNE TEMPÉRATURE
+SELON UNE ZONE INDIQUEZ PAR UN UTILISATEUR EN UTILISANT L'API DE OPEN WEATHER
+SERVICE EN LIGNE QUI FOURNIT DES DONNÉES MÉTÉOROLOGIQUES ACTUELLES. -->
+
+<!-- PAGE INDEX HTML -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Thermomètre</title>
+</head>
+
+<body>
+    <video loop="true" autoplay>
+        <source src="./img/IA.appThermometre_videobg_ciel.mp4" type="video/mp4">
+    </video>
+    <header>
+        <div class="divRetour">
+            <button type="button" id="boutonMenu" class="boutonMenu">Menu</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="idAffichage" class="divAffichage">
+            <p id="affichage"></p>
+        </div>
+
+        <div class="divIndication">
+            <label for="localisation">Indique ta localisation :</label>
+            <input type="text" name="localisation" id="localisation" class="localisation" placeholder="Je suis à.."
+                maxlength="20">
+            <div class="divRecherche">
+                <button type="button" id="boutonRecherche"><img src="./img/appThermometre_logo_btn_temps.png"
+                        alt=""></button>
+            </div>
+        </div>
+        <div class="divReglages">
+            <div>
+                <input type="radio" name="mode" id="darkMode">
+                <label for="darkMode">Dark mode</label>
+            </div>
+            <div>
+                <input type="radio" name="mode" id="colorMode">
+                <label for="colorMode">Color mode</label>
+            </div>
+            <div>
+                <input type="color" name="color" id="choixCouleurs" value="#f0f8ff">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+    </footer>
+    <script type="module" src="./script.js" defer></script>
+</body>
+
+</html>

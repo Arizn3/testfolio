@@ -1,10 +1,10 @@
 // BOUTON MENU
 const retour = document.getElementById('boutonMenu');
 retour.addEventListener('click', () => {
-    location.replace('http://localhost/testfolio/Menu-JavaScript/index.html');
+    location.replace('/Users/lucas/Documents/Projets/App-Front/Menu/index.html');
 });
 
-// CLASSE CALCULATEUR DE CREPE
+// CLASS QUI CALCULE LES INGRÉDIENTS SELON UN NOMBRE D'ŒUFS INDIQUER PAR L'UTILISATEUR
 class CalculateurDeCrepe {
     constructor(id) {
         this.id = id;
@@ -65,7 +65,7 @@ class CalculateurDeCrepe {
     };
 };
 
-// INSTANCE
+// INSTANCE DE LA CLASS
 const instance = new CalculateurDeCrepe('nombreOeuf');
 
 // APPEL DE LA METHODE INCREMENTALE

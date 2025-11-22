@@ -1,3 +1,4 @@
+// FONCTION JS ANONYME POUR LA SELECTION D'UNE APPLICATION 
 const replace = () => {
     let choix = document.getElementById('listeFonctions').value;
     switch (choix) {
@@ -22,12 +23,11 @@ const replace = () => {
     };
 };
 
+// BOUTON ET EVENEMENT
 const bouton = document.getElementById('bouton');
-
 bouton.addEventListener('click', () => {
     replace();
 });
-
 addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
         replace();
